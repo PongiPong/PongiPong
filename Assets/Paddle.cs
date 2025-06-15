@@ -4,30 +4,33 @@ using UnityEngine;
 
 public class Paddle : MonoBehaviour
 {
+    public bool isPlayer1; 
     public float speed = 10f;
-    public float boundaryY = 4.5f;
+    public Rigidbody2D rb;
+    private float movement;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
     void Update()
     {
-        float move = 0f;
-        if (Input.GetKey(KeyCode.W))
+        movement = 0f;
+        
+        if (isPlayer1)
         {
-            move = 1f;
+            // Player 1 uses W/S keys
+            if (Input.GetKey(KeyCode.W))
+                movement = 1f;
+            else if (Input.GetKey(KeyCode.S))
+                movement = -1f;
         }
-        else if (Input.GetKey(KeyCode.S))
+        else
         {
-            move = -1f;
+            // Player 2 uses Up/Down arrow keys
+            if (Input.GetKey(KeyCode.UpArrow))
+                movement = 1f;
+            else if (Input.GetKey(KeyCode.DownArrow))
+                movement = -1f;
         }
-        Vector3 pos = transform.position;
-        pos.y += move * speed * Time.deltaTime;
-        pos.y = Mathf.Clamp(pos.y, -boundaryY, boundaryY);
-        transform.position = pos;
+
+        rb.velocity = new Vector2(rb.velocity.x, movement * speed);
     }
 }
+
