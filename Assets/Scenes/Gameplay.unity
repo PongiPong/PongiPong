@@ -835,7 +835,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f47e36209b1844568b01c856662a5e20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoringPlayerNumber: 1
+  scoringPlayerNumber: 2
 --- !u!1 &251021000
 GameObject:
   m_ObjectHideFlags: 0
@@ -1361,7 +1361,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 264707559}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: P2_NextCharacter
+        m_MethodName: P1_NextCharacter
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3417,7 +3417,7 @@ MonoBehaviour:
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 0
-  m_FillAmount: 0.752
+  m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 1
   m_UseSpriteMesh: 0
@@ -3659,9 +3659,9 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1519262277}
-  - {fileID: 2002212252}
   - {fileID: 9577336}
   - {fileID: 754560893}
+  - {fileID: 2002212252}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -3812,7 +3812,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f47e36209b1844568b01c856662a5e20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoringPlayerNumber: 2
+  scoringPlayerNumber: 1
 --- !u!1 &1962984661
 GameObject:
   m_ObjectHideFlags: 0
@@ -4070,7 +4070,7 @@ MonoBehaviour:
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 0
-  m_FillAmount: 0.752
+  m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
